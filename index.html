@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Praise</title>
   </head>
   <body>
-    <header>
-      <img src="img/logo.png" alt="heart logo" width="120px" height="120px" />
+    <header class="header">
+      <div class="logo">
+        <img src="img/logo.png" alt="heart logo" width="120px" height="120px" />
+        <h1>Praise</h1>
+      </div>
 
-      <h1>Praise</h1>
-
-      <button>Spread The Love</button>
+      <button class="head-btn">Spread The Love</button>
     </header>
 
-    <form action="">
+    <form class="main-form" action="">
       <input type="text" placeholder="Share an appreciation..." />
       <span>250</span>
       <select name="" id="">
@@ -50,11 +59,12 @@
         <option value="">General Services</option>
         <option value="">Information Technology</option>
       </select>
+      <button>Post</button>
     </form>
 
-    <main>
+    <main class="main-container">
       <aside>
-        <ul>
+        <ul class="dep-btn">
           <li><button>All</button></li>
           <li><button>Emergency</button></li>
           <li><button>ICU</button></li>
@@ -74,41 +84,41 @@
 
       <section>
         <ul>
-          <li>
-            <p>
+          <li class="post-container">
+            <p class="post">
               Dr. Gracie is the most compassionate mental health provider!
-              <span>#Patient#</span>
-              <span>#Psychiatry#</span>
+              <span class="who">- Patient</span>
             </p>
-            <div>
+            <span class="department psych">Psychiatry</span>
+            <div class="reactions">
               <button>❤️ <strong>25</strong></button>
               <button>🙌 <strong>15</strong></button>
               <button>🙏 <strong>3</strong></button>
             </div>
           </li>
-          <li>
-            <p>
+          <li class="post-container">
+            <p class="post">
               "Dr. Sandeep. I wanted to express my deepest gratitude for the
               excellent care you provided during my recent treatment for my
               heart condition. Your expertise and professionalism were apparent
               from the very beginning, and I knew I was in good hands."
-              <span>#Patient#</span>
-              <span>#Cardiology#</span>
+              <span class="who">- Patient</span>
             </p>
-            <div>
+            <span class="department cardi">Cardiology</span>
+            <div class="reactions">
               <button>❤️ <strong>50</strong></button>
               <button>🙌 <strong>3</strong></button>
               <button>🙏 <strong>20</strong></button>
             </div>
           </li>
-          <li>
-            <p>
-              A special thanks to John in IT for helping me navigate the EPIC
+          <li class="post-container">
+            <p class="post">
+              A special thanks to John from IT for helping me navigate the EPIC
               software.
-              <span>#Employee#</span>
-              <span>#Information Techology#</span>
+              <span class="who">- Nurse</span>
             </p>
-            <div>
+            <span class="department infor">IT</span>
+            <div class="reactions">
               <button>❤️ <strong>13</strong></button>
               <button>🙌 <strong>30</strong></button>
               <button>🙏 <strong>2</strong></button>

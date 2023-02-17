@@ -7,7 +7,7 @@ const CATEGORIES = [
   { name: "General Surgery", color: "#eab308" },
   { name: "Anesthesiology", color: "#7B68EE" },
   { name: "Oncology", color: "#14b8a6" },
-  { name: "Psychiatry", color: "#00FA9A" },
+  { name: "Psychiatry", color: "#16d78d" },
   { name: "Pharmacology", color: "#42a69A" },
   { name: "Admissions", color: "#FFA07A" },
   { name: "General Services", color: "#2E8B57" },
