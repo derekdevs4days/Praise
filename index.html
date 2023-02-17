@@ -15,117 +15,144 @@
     <title>Praise</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <img src="img/logo.png" alt="heart logo" width="120px" height="120px" />
-        <h1>Praise</h1>
-      </div>
+    <div class="body-container">
+      <header class="header">
+        <div class="logo">
+          <img
+            src="img/logo.png"
+            alt="heart logo"
+            width="120px"
+            height="120px"
+          />
+          <h1>Praise</h1>
+        </div>
 
-      <button class="head-btn">Spread The Love</button>
-    </header>
+        <button class="head-btn btn-large">Spread The Love</button>
+      </header>
 
-    <form class="main-form" action="">
-      <input type="text" placeholder="Share an appreciation..." />
-      <span>250</span>
-      <select name="" id="">
-        <option value="" disabled selected>Select Your Option</option>
-        <option value="patient">Patient</option>
-        <option value="visitor">Visitor</option>
-        <option value="physician">Physician</option>
-        <option value="resident">Resident</option>
-        <option value="phys-assist">Physician Assistant</option>
-        <option value="pharmacist">Pharmacist</option>
-        <option value="nurse-pract">Nurse Practitioner</option>
-        <option value="nurse-mangager">Nurse Manager</option>
-        <option value="nurse">Nurse</option>
-        <option value="tech">Techician</option>
-        <option value="assistant">Assistant</option>
-        <option value="general">General</option>
-        <option value="other">Other</option>
-      </select>
-      <select name="" id="">
-        <option value="">All</option>
-        <option value="">Emergency</option>
-        <option value="">ICU</option>
-        <option value="">Neurology</option>
-        <option value="">Obstetrics</option>
-        <option value="">Cardiology</option>
-        <option value="">General Surgery</option>
-        <option value="">Anesthesiology</option>
-        <option value="">Oncology</option>
-        <option value="">Psychiatry</option>
-        <option value="">Pharmacology</option>
-        <option value="">Admissions</option>
-        <option value="">General Services</option>
-        <option value="">Information Technology</option>
-      </select>
-      <button>Post</button>
-    </form>
+      <form class="main-form" action="">
+        <input type="text" placeholder="Share an appreciation..." />
+        <span class="char-limit">250</span>
 
-    <main class="main-container">
-      <aside>
-        <ul class="dep-btn">
-          <li><button>All</button></li>
-          <li><button>Emergency</button></li>
-          <li><button>ICU</button></li>
-          <li><button>Neurology</button></li>
-          <li><button>Obstetrics</button></li>
-          <li><button>Cardiology</button></li>
-          <li><button>General Surgery</button></li>
-          <li><button>Anesthesiology</button></li>
-          <li><button>Oncology</button></li>
-          <li><button>Psychiatry</button></li>
-          <li><button>Pharmacology</button></li>
-          <li><button>Admissions</button></li>
-          <li><button>General Services</button></li>
-          <li><button>Information Technology</button></li>
-        </ul>
-      </aside>
+        <select name="" id="">
+          <option value="" disabled selected>Select Your Option</option>
+          <option value="patient">Patient</option>
+          <option value="visitor">Visitor</option>
+          <option value="physician">Physician</option>
+          <option value="resident">Resident</option>
+          <option value="phys-assist">Physician Assistant</option>
+          <option value="pharmacist">Pharmacist</option>
+          <option value="nurse-pract">Nurse Practitioner</option>
+          <option value="nurse-mangager">Nurse Manager</option>
+          <option value="nurse">Nurse</option>
+          <option value="tech">Techician</option>
+          <option value="assistant">Assistant</option>
+          <option value="general">General</option>
+          <option value="other">Other</option>
+        </select>
 
-      <section>
-        <ul>
-          <li class="post-container">
-            <p class="post">
-              Dr. Gracie is the most compassionate mental health provider!
-              <span class="who">- Patient</span>
-            </p>
-            <span class="department psych">Psychiatry</span>
-            <div class="reactions">
-              <button>❤️ <strong>25</strong></button>
-              <button>🙌 <strong>15</strong></button>
-              <button>🙏 <strong>3</strong></button>
-            </div>
-          </li>
-          <li class="post-container">
-            <p class="post">
-              "Dr. Sandeep. I wanted to express my deepest gratitude for the
-              excellent care you provided during my recent treatment for my
-              heart condition. Your expertise and professionalism were apparent
-              from the very beginning, and I knew I was in good hands."
-              <span class="who">- Patient</span>
-            </p>
-            <span class="department cardi">Cardiology</span>
-            <div class="reactions">
-              <button>❤️ <strong>50</strong></button>
-              <button>🙌 <strong>3</strong></button>
-              <button>🙏 <strong>20</strong></button>
-            </div>
-          </li>
-          <li class="post-container">
-            <p class="post">
-              A special thanks to John from IT for helping me navigate the EPIC
-              software.
-              <span class="who">- Nurse</span>
-            </p>
-            <span class="department infor">IT</span>
-            <div class="reactions">
-              <button>❤️ <strong>13</strong></button>
-              <button>🙌 <strong>30</strong></button>
-              <button>🙏 <strong>2</strong></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+        <select name="" id="">
+          <option value="">Emergency</option>
+          <option value="">ICU</option>
+          <option value="">Neurology</option>
+          <option value="">Obstetrics</option>
+          <option value="">Cardiology</option>
+          <option value="">General Surgery</option>
+          <option value="">Anesthesiology</option>
+          <option value="">Oncology</option>
+          <option value="">Psychiatry</option>
+          <option value="">Pharmacology</option>
+          <option value="">Admissions</option>
+          <option value="">General Services</option>
+          <option value="">Information Technology</option>
+        </select>
+
+        <button class="btn-large">Post</button>
+      </form>
+
+      <main class="main-container">
+        <aside>
+          <ul class="dep-btn">
+            <li><button class="btn-">All</button></li>
+            <li><button class="btn-">Emergency</button></li>
+            <li><button class="btn-">ICU</button></li>
+            <li><button class="btn-">Neurology</button></li>
+            <li><button class="btn-">Obstetrics</button></li>
+            <li><button class="btn-">Cardiology</button></li>
+            <li><button class="btn-">General Surgery</button></li>
+            <li><button class="btn-">Anesthesiology</button></li>
+            <li><button class="btn-">Oncology</button></li>
+            <li><button class="btn-">Psychiatry</button></li>
+            <li><button class="btn-">Pharmacology</button></li>
+            <li><button class="btn-">Admissions</button></li>
+            <li><button class="btn-">General Services</button></li>
+            <li><button class="btn-">Information Technology</button></li>
+          </ul>
+        </aside>
+
+        <select class="dep-btn-mobile btn-large" name="" id="">
+          <option value="">All</option>
+          <option value="">Emergency</option>
+          <option value="">ICU</option>
+          <option value="">Neurology</option>
+          <option value="">Obstetrics</option>
+          <option value="">Cardiology</option>
+          <option value="">General Surgery</option>
+          <option value="">Anesthesiology</option>
+          <option value="">Oncology</option>
+          <option value="">Psychiatry</option>
+          <option value="">Pharmacology</option>
+          <option value="">Admissions</option>
+          <option value="">General Services</option>
+          <option value="">Information Technology</option>
+        </select>
+
+        <section>
+          <ul>
+            <li class="post-container">
+              <p class="post">
+                Dr. Gracie is the most compassionate mental health provider!
+                <span class="who">- Patient</span>
+              </p>
+              <span class="department psych">Psychiatry</span>
+              <div class="reactions">
+                <button>❤️ 25</button>
+                <button>🙌 15</button>
+                <button>🙏 3</button>
+              </div>
+            </li>
+            <li class="post-container">
+              <p class="post">
+                "Dr. Sandeep. I wanted to express my deepest gratitude for the
+                excellent care you provided during my recent treatment for my
+                heart condition. Your expertise and professionalism were
+                apparent from the very beginning, and I knew I was in good
+                hands."
+                <span class="who">- Patient</span>
+              </p>
+              <span class="department cardi">Cardiology</span>
+              <div class="reactions">
+                <button>❤️ 50</button>
+                <button>🙌 3</button>
+                <button>🙏 20</button>
+              </div>
+            </li>
+            <li class="post-container">
+              <p class="post">
+                A special thanks to John from IT for helping me navigate the
+                EPIC software.
+                <span class="who">- Nurse</span>
+              </p>
+              <span class="department infor">IT</span>
+              <div class="reactions">
+                <button>❤️ 13</button>
+                <button>🙌 30</button>
+                <button>🙏 2</button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
