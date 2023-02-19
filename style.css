@@ -38,14 +38,14 @@ button {
   transform: scale(110%) rotate(2deg);
 }
 
-.btn- {
+.btn-d {
   width: 100%;
   background-color: rgba(106, 106, 106, 0.543);
   border: 1px solid red;
   margin-bottom: 8px;
 }
 
-.btn-:hover {
+.btn-d:hover {
   transform: scale(110%) rotate(2deg);
 }
 
@@ -212,7 +212,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .dep-btn {
+  .btn-d {
     display: none;
   }
   .dep-btn-mobile {
@@ -229,47 +229,51 @@ ul {
     color: inherit;
     border-radius: 100px;
   }
+  .btn-large:hover {
+    transform: scale(100%);
+    opacity: 0.75;
+  }
+}
 
-  @media (max-width: 650px) {
-    body * {
-      font-size: 16px;
-    }
-
-    .logo {
-      gap: 3px;
-    }
-    h1 {
-      font-size: 33px;
-    }
-
-    button {
-      font-size: 16px;
-    }
-
-    .head-btn {
-      padding: 12px;
-    }
-    .btn-large {
-      font-size: 18px;
-    }
+@media (max-width: 650px) {
+  body * {
+    font-size: 16px;
   }
 
-  @media (max-width: 525px) {
-    body * {
-      font-size: 12px;
-    }
-    h1 {
-      display: none;
-    }
-    button {
-      font-size: 12px;
-    }
+  .logo {
+    gap: 3px;
+  }
+  h1 {
+    font-size: 33px;
+  }
 
-    .btn-large {
-      font-size: 12px;
-    }
-    .head-btn {
-      padding: 8px;
-    }
+  button {
+    font-size: 16px;
+  }
+
+  .head-btn {
+    padding: 16px 24px 13px 24px;
+  }
+  .btn-large {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+  body * {
+    font-size: 14px;
+  }
+  h1 {
+    display: none;
+  }
+  button {
+    font-size: 12px;
+  }
+
+  .btn-large {
+    font-size: 16px;
+  }
+  .head-btn {
+    padding: 16px 24px 13px 24px;
   }
 }

@@ -35,36 +35,41 @@
         <span class="char-limit">250</span>
 
         <select name="" id="">
-          <option value="" disabled selected>Select Your Option</option>
+          <option value="" disabled selected>Select an option</option>
           <option value="patient">Patient</option>
+          <option value="family-member">Family Member</option>
           <option value="visitor">Visitor</option>
           <option value="physician">Physician</option>
-          <option value="resident">Resident</option>
-          <option value="phys-assist">Physician Assistant</option>
-          <option value="pharmacist">Pharmacist</option>
-          <option value="nurse-pract">Nurse Practitioner</option>
-          <option value="nurse-mangager">Nurse Manager</option>
+          <option value="physician-assistant">Physician Assistant</option>
+          <option value="nurse-practitioner">Nurse Practitioner</option>
           <option value="nurse">Nurse</option>
-          <option value="tech">Techician</option>
-          <option value="assistant">Assistant</option>
-          <option value="general">General</option>
+          <option value="paramedic">Paramedic</option>
+          <option value="medical-assistant">Medical Assistant</option>
+          <option value="administrative-staff">Administrative Staff</option>
+          <option value="ancillary-staff">Ancillary Staff</option>
+          <option value="volunteer">Volunteer</option>
           <option value="other">Other</option>
         </select>
 
-        <select name="" id="">
-          <option value="">Emergency</option>
-          <option value="">ICU</option>
-          <option value="">Neurology</option>
-          <option value="">Obstetrics</option>
-          <option value="">Cardiology</option>
-          <option value="">General Surgery</option>
-          <option value="">Anesthesiology</option>
-          <option value="">Oncology</option>
-          <option value="">Psychiatry</option>
-          <option value="">Pharmacology</option>
-          <option value="">Admissions</option>
-          <option value="">General Services</option>
-          <option value="">Information Technology</option>
+        <select name="category" id="category">
+          <option value="" disabled selected>Select a department</option>
+          <option value="admissions">Admissions</option>
+          <option value="anesthesiology">Anesthesiology</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="emergency">Emergency</option>
+          <option value="gastroenterology">Gastroenterology</option>
+          <option value="general-services">General Services</option>
+          <option value="icu">ICU</option>
+          <option value="information-technology">Information Technology</option>
+          <option value="neurology">Neurology</option>
+          <option value="obstetrics">Obstetrics</option>
+          <option value="oncology">Oncology</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="pathology">Pathology</option>
+          <option value="pharmacology">Pharmacology</option>
+          <option value="psychiatry">Psychiatry</option>
+          <option value="radiology">Radiology</option>
+          <option value="surgery">Surgery</option>
         </select>
 
         <button class="btn-large">Post</button>
@@ -72,39 +77,61 @@
 
       <main class="main-container">
         <aside>
-          <ul class="dep-btn">
-            <li><button class="btn-">All</button></li>
-            <li><button class="btn-">Emergency</button></li>
-            <li><button class="btn-">ICU</button></li>
-            <li><button class="btn-">Neurology</button></li>
-            <li><button class="btn-">Obstetrics</button></li>
-            <li><button class="btn-">Cardiology</button></li>
-            <li><button class="btn-">General Surgery</button></li>
-            <li><button class="btn-">Anesthesiology</button></li>
-            <li><button class="btn-">Oncology</button></li>
-            <li><button class="btn-">Psychiatry</button></li>
-            <li><button class="btn-">Pharmacology</button></li>
-            <li><button class="btn-">Admissions</button></li>
-            <li><button class="btn-">General Services</button></li>
-            <li><button class="btn-">Information Technology</button></li>
+          <ul>
+            <li>
+              <button class="btn-d all">All</button>
+            </li>
+            <li><button class="btn-d admissions">Admissions</button></li>
+            <li>
+              <button class="btn-d anesthesiology">Anesthesiology</button>
+            </li>
+            <li><button class="btn-d cardiology">Cardiology</button></li>
+            <li><button class="btn-d emergency">Emergency</button></li>
+            <li>
+              <button class="btn-d gastroenterology">Gastroenterology</button>
+            </li>
+            <li>
+              <button class="btn-d general-services">General Services</button>
+            </li>
+            <li><button class="btn-d icu">ICU</button></li>
+            <li>
+              <button class="btn-d information-technology">
+                Information Technology
+              </button>
+            </li>
+            <li><button class="btn-d neurology">Neurology</button></li>
+            <li><button class="btn-d obstetrics">Obstetrics</button></li>
+            <li><button class="btn-d oncology">Oncology</button></li>
+            <li><button class="btn-d orthopedics">Orthopedics</button></li>
+            <li><button class="btn-d pathology">Pathology</button></li>
+            <li><button class="btn-d pharmacology">Pharmacology</button></li>
+            <li><button class="btn-d psychiatry">Psychiatry</button></li>
+            <li><button class="btn-d radiology">Radiology</button></li>
+            <li>
+              <button class="btn-d surgery">Surgery</button>
+            </li>
           </ul>
         </aside>
 
-        <select class="dep-btn-mobile btn-large" name="" id="">
-          <option value="">All</option>
-          <option value="">Emergency</option>
-          <option value="">ICU</option>
-          <option value="">Neurology</option>
-          <option value="">Obstetrics</option>
-          <option value="">Cardiology</option>
-          <option value="">General Surgery</option>
-          <option value="">Anesthesiology</option>
-          <option value="">Oncology</option>
-          <option value="">Psychiatry</option>
-          <option value="">Pharmacology</option>
-          <option value="">Admissions</option>
-          <option value="">General Services</option>
-          <option value="">Information Technology</option>
+        <select class="dep-btn-mobile btn-large" name="category" id="category">
+          <option value="" disabled selected>Select a department</option>
+          <option value="admissions">Admissions</option>
+          <option value="anesthesiology">Anesthesiology</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="emergency">Emergency</option>
+          <option value="gastroenterology">Gastroenterology</option>
+          <option value="general-services">General Services</option>
+          <option value="icu">ICU</option>
+          <option value="information-technology">Information Technology</option>
+          <option value="neurology">Neurology</option>
+          <option value="obstetrics">Obstetrics</option>
+          <option value="oncology">Oncology</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="pathology">Pathology</option>
+          <option value="pharmacology">Pharmacology</option>
+          <option value="psychiatry">Psychiatry</option>
+          <option value="radiology">Radiology</option>
+          <option value="surgery">Surgery</option>
         </select>
 
         <section>
