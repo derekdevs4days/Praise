@@ -27,10 +27,10 @@
           <h1>Praise</h1>
         </div>
 
-        <button class="head-btn btn-large">Spread The Love</button>
+        <button class="head-btn btn-large">Share</button>
       </header>
 
-      <form class="main-form" action="">
+      <form class="main-form hidden" action="">
         <input type="text" placeholder="Share an appreciation..." />
         <span class="char-limit">250</span>
 
@@ -113,7 +113,11 @@
           </ul>
         </aside>
 
-        <select class="dep-btn-mobile btn-large" name="category" id="category">
+        <select
+          class="dep-btn-mobile btn-large hidden"
+          name="category"
+          id="category"
+        >
           <option value="" disabled selected>Select a department</option>
           <option value="admissions">Admissions</option>
           <option value="anesthesiology">Anesthesiology</option>
@@ -181,5 +185,6 @@
         </section>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -98,6 +98,10 @@ h1 {
   justify-content: space-evenly;
   gap: 10px;
 }
+
+.hidden {
+  display: none;
+}
 input,
 select {
   background-color: #71717a;
@@ -139,9 +143,6 @@ ul {
   list-style: none;
 }
 
-.dep-btn-mobile {
-  display: none;
-}
 /* MAIN-ASIDE */
 
 /* MAIN-SECTION */
