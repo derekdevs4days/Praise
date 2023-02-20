@@ -1,6 +1,8 @@
 const BTN_FORM = document.querySelector(".head-btn");
-
 const FORM = document.querySelector(".main-form");
+const POST_LIST = document.querySelector(".post-list");
+
+POST_LIST.innerHTML = "";
 
 const showForm = () => {
   if (FORM.classList.contains("hidden")) {
