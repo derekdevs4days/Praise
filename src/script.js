@@ -1,58 +1,40 @@
-const initialComments = [
-  {
-    id: 1,
-    text: "Dr. Gracie is the most compassionate mental health provider!",
-    source: "patient",
-    category: "psychiatry",
-    votesInteresting: 24,
-    votesMindblowing: 9,
-    votesFalse: 0,
-    createdIn: 2023,
-  },
-
-  {
-    id: 2,
-    text: "Dr. Sandeep. I wanted to express my deepest gratitude for the excellent care you provided during my recent treatment for my heart condition. Your expertise and professionalism were apparent from the very beginning, and I knew I was in good hands.",
-    source: "patient",
-    category: "cardiology",
-    votesInteresting: 40,
-    votesMindblowing: 4,
-    votesFalse: 0,
-    createdIn: 2023,
-  },
-
-  {
-    id: 3,
-    text: "A special thanks to John in IT for helping me navigate the EPIC software.",
-    source: "employee",
-    category: "it",
-    votesInteresting: 9,
-    votesMindblowing: 21,
-    votesFalse: 0,
-    createdIn: 2023,
-  },
-];
-
 // DOM Elements
 const BTN_FORM = document.querySelector(".head-btn");
 const FORM = document.querySelector(".main-form");
 const POST_LIST = document.querySelector(".post-list");
+const DEPARTMENTS = document.querySelector("aside ul");
 
 //Create DOM elements
 POST_LIST.innerHTML = "";
-//POST_LIST.insertAdjacentHTML("afterbegin");
-const htmlArr = initialComments.map(
-  (post) => `<li class="post-container">
-    <p class="post">
-      ${post.text}
-      <span class="who">- ${post.source}</span>
-    </p>
-    <span class="department psych">${post.category}</span>
-  </li>`
-);
-const html = htmlArr.join("");
 
-POST_LIST.insertAdjacentHTML("afterbegin", html);
+//Fetch API
+loadPosts("all");
+async function loadPosts(category) {
+  const res = await fetch(
+    "https://jiwmiywskwvnsszhupxz.supabase.co/rest/v1/posts",
+    {
+      headers: {},
+    }
+  );
+  let data = await res.json();
+  let newData = filterData(data, category);
+  createPost(newData);
+}
+
+const createPost = (data) => {
+  const htmlArr = data.map(
+    (post) => `<li class="post-container">
+    <p class="post">
+      ${post.post}
+      <span class="who">- ${post.who}</span>
+    </p>
+    <span class="department psych">${post.department}</span>
+  </li>`
+  );
+  const html = htmlArr.join("");
+
+  POST_LIST.insertAdjacentHTML("afterbegin", html);
+};
 
 //Toggle form visibility
 const showForm = () => {
@@ -66,3 +48,25 @@ const showForm = () => {
 };
 
 BTN_FORM.addEventListener("click", showForm);
+
+//Filter Posts
+const filterDepartment = (event) => {
+  let category = "";
+  if (event.target.tagName === "BUTTON") {
+    category = event.target.className;
+  }
+  category = category.split(" ")[1];
+  category = category.split("-").join(" ");
+  POST_LIST.innerHTML = "";
+  loadPosts(category);
+};
+
+const filterData = (data, category) => {
+  if (category === "all") {
+    return data;
+  } else {
+    return data.filter((obj) => obj.department.trim() === category);
+  }
+};
+
+DEPARTMENTS.addEventListener("click", filterDepartment);
