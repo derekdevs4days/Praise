@@ -22,13 +22,17 @@ async function loadPosts(category) {
 }
 
 const createPost = (data) => {
+  scrollToTop();
+
   const htmlArr = data.map(
     (post) => `<li class="post-container">
     <p class="post">
       ${post.post}
       <span class="who">- ${post.who}</span>
     </p>
-    <span class="department psych">${post.department}</span>
+    <span class="department green">${
+      post.department === "general services" ? "services" : post.department
+    }</span>
   </li>`
   );
   const html = htmlArr.join("");
@@ -51,13 +55,13 @@ BTN_FORM.addEventListener("click", showForm);
 
 //Filter Posts
 const filterDepartment = (event) => {
+  POST_LIST.innerHTML = "";
   let category = "";
   if (event.target.tagName === "BUTTON") {
     category = event.target.className;
   }
   category = category.split(" ")[1];
   category = category.split("-").join(" ");
-  POST_LIST.innerHTML = "";
   loadPosts(category);
 };
 
@@ -70,3 +74,11 @@ const filterData = (data, category) => {
 };
 
 DEPARTMENTS.addEventListener("click", filterDepartment);
+
+//Scroll To Top
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
