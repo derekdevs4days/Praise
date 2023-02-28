@@ -3,6 +3,7 @@ const BTN_FORM = document.querySelector(".head-btn");
 const FORM = document.querySelector(".main-form");
 const POST_LIST = document.querySelector(".post-list");
 const DEPARTMENTS = document.querySelector("aside ul");
+const DEPARTMENTS_MOBILE = document.querySelector("#category-mobile");
 
 //Create DOM elements
 POST_LIST.innerHTML = "";
@@ -18,7 +19,6 @@ async function loadPosts(category) {
     }
   );
   let data = await res.json();
-
   let newData = filterData(data, category);
   createPost(newData);
 }
@@ -59,12 +59,19 @@ BTN_FORM.addEventListener("click", showForm);
 //Filter Posts
 const filterDepartment = (event) => {
   POST_LIST.innerHTML = "";
+
   let category = "";
+
   if (event.target.tagName === "BUTTON") {
     category = event.target.className;
+    category = category.split(" ")[1];
+    category = category.split("-").join(" ");
   }
-  category = category.split(" ")[1];
-  category = category.split("-").join(" ");
+
+  if (event.target.tagName === "SELECT") {
+    category = event.target.value;
+    category = category.split("-").join(" ");
+  }
 
   loadPosts(category);
 };
@@ -78,6 +85,7 @@ const filterData = (data, category) => {
 };
 
 DEPARTMENTS.addEventListener("click", filterDepartment);
+DEPARTMENTS_MOBILE.addEventListener("change", filterDepartment);
 
 //Scroll To Top
 const scrollToTop = () => {

@@ -10,7 +10,7 @@ body {
   color: #000000;
 }
 
-.body-container {
+#root {
   margin-right: 5%;
 }
 
