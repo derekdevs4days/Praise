@@ -155,14 +155,19 @@ button {
   flex-shrink: 0;
 }
 .reactions button {
-  background-color: #71717a;
+  background-color: #b6b3b3;
   padding: 7px 13px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  border-radius: 8px;
 }
 .reactions button:hover {
-  background-color: #18181b;
+  background-color: #5f5f5f;
+}
+
+.reactions button:disabled {
+  background-color: #ffffff;
 }
 
 /* MAIN-SECTION */
@@ -189,10 +194,21 @@ button {
   border-radius: 5px;
 }
 
-.green {
+.bubble {
   background-color: #e8968182;
 }
 
+.loading {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.post-count {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
 /* Media Queries */
 @media (max-width: 1200px) {
   .post-container {
@@ -227,6 +243,10 @@ button {
   }
   .body-container {
     margin: 0 25px;
+  }
+
+  #root {
+    margin: 0 15px;
   }
 
   .header,
