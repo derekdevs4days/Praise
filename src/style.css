@@ -129,7 +129,7 @@ button {
   height: 50px;
 }
 .btn-large:hover {
-  transform: scale(110%) rotate(2deg);
+  background-color: #d6827cde;
 }
 
 .all {
