@@ -58,7 +58,7 @@ function Loader() {
 }
 
 function Header({ showForm, setShowForm }) {
-  const APP_TITLE = "Priase";
+  const APP_TITLE = "Praise";
 
   return (
     <header className="header">
